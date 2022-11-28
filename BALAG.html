@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>FOR BALAG</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ 
+
+
+<style >
+	
+
+
+*{
+	margin: 0;padding: o; box-sizing: border-box;
+}
+header{
+	width: 100%; height: 100vh;
+	background-image: url('./bm1.jpg');
+	background-repeat: no-repeat;   
+	background-size: cover;
+}
+nav {
+	width: 100%; height: 15vh;
+	background: rgba(0,0,0,0.2);
+	color: white; display: flex; justify-content: space-between;
+	align-items: center; text-transform: uppercase;
+
+}
+nav .logo{
+	width: 25%; text-align: center;
+}   
+nav .menu{
+	width: 40%;
+	display: flex; justify-content: space-around;
+  float: left;
+}
+nav .menu a {
+	width: 25%
+	text-decoration:none; color: white;
+font-weight: bold;
+transition: 0.5;
+}
+
+nav:hover .menu a{
+	transform: scale(1.5);
+	opacity: .2;
+	filter: blur(3px);
+
+
+}
+nav .menu a:hover
+{
+	transform: scale(2);
+	opacity: 1;
+	filter: blur(0);
+	
+
+
+}
+nav .menu a:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+	background: #ff497c;
+	transition: transform 0.5s;
+	transform-origin: right;
+	transform: scaleX(0);
+	z-index: -1;
+
+}
+nav .menu a:hover:before
+{
+     transition: transform 0.5s;
+	transform-origin: left;
+	transform: scaleX(1);	
+
+}
+
+main {
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center; color: white;
+
+}
+section h3 {
+	font-size: 30px; font-weight: 200;letter-spacing: 3px;
+	text-shadow: 1px 1px 2px black;
+}
+section h1{
+	margin: 30px 0 20px 0;
+	font-size: 40px;
+	font-weight: 700;
+	text-shadow: 2px 1px 5px black;
+	text-transform: uppercase;
+}
+section p{
+	font-size: 25px;
+	word-spacing: 2px;
+	margin-bottom: 25px;
+	text-shadow: 1px 1px 1px black;
+}
+section a{
+	padding: 12px 30px;
+	border-radius: 4px;
+	outline: none;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration-color: none;
+	letter-spacing: 4px;
+    transition: all .5s ease;
+}
+section .btnone{
+	background-color:white;
+	color: #000;
+	margin-right:10px;
+}
+.btnone:hover{
+	background-color:#00b894;
+	color: white;
+}
+section .btntwo{
+	background-color:#00b894;
+	color: white;
+}
+.btntwo:hover{
+	background-color:white;
+	color: #000;
+}
+h1 .colorchange{
+	animation:changecolor 5s infinite linear;
+     
+}
+@keyframes changecolor{
+	0%{color: red;}
+	25%{color: #bf55ec;}
+	50%{color: white;}
+	100%{color: #00b894; }
+}
+.search-box{
+	position: absolute;
+	top: 25%;
+	right:38%;
+    transform: translate(-50%,-50%);
+    background: #aeeb34;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+.search-box:hover >.search-text{
+	width: 150px;
+	padding: 0 6px;
+	
+}
+.search-box:hover >.search-btn{
+	background: white;
+
+
+}
+.search-btn{
+	color:#00b894;
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #2f3640;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+}
+
+
+
+.search-text{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.colorchange{
+	animation: colorchangex 1s infinite;
+
+
+}
+@keyframes colorchangex{
+	0%{color: red;}
+	25%{color: #bf55ec;}
+	50%{color: white;}
+	100%{color: blue; }
+
+}
+.bar-icon{display: none;}
+
+article h3.colorchangeit{
+
+	animation: colorchangeits 5s infinite;}
+
+@keyframes colorchangeits{
+	0%{color: red;}
+	25%{color: #bf55ec;}
+	50%{color: #00b894;}
+	100%{color: blue; }
+
+}
+
+
+
+/*/////// Responsive querirs ///////*/
+@media only screen and (max-width: 1180px){
+.main{
+	width: 100%;
+	padding: 0 2%;
+	
+}	
+}
+@media only screen and (max-width: 900px){
+	h3{font-size:150%; }
+	h1{font-size: 200%;}
+}
+@media only screen and (max-width: 750px){
+	h3{font-size:130%; }
+	h1{font-size: 170%;}
+	nav .menu{display: none;}
+	.bar-icon{display: inline-block;
+       color: #00b894;
+       margin-top: 10px;
+       margin-right: 20px;
+       float: right;
+
+	}
+	.menu a{
+
+
+		float: left;
+       display: block;
+  	  margin-top: 10px;
+
+  }
+
+}
+@media only screen and (max-width: 450px){
+	.btnone{
+		margin-right: 20px;
+
+	}
+	h3{font-size:100%; }
+	h1{font-size: 140%;}
+
+}
+
+
+</style>
+
+
+
+
+	
+<link href="https://fonts.google.com/specimen/Josefin+Sans/?query=jos" rel="stylesheet">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.compat.css">
+
+<script src="https://use.fontawesome.com/275be5803a.js"></script>
+
+
+
+
+</head> 
+<body>
+<header>
+
+	<nav>
+		<div class="logo"> <h1 class=" animate heartBeat linear infinite "> COME & MATCH </h1></div>
+		<div class="menu" id="" style="margin-right: 100px;">
+
+			<a href="#">Home</a>
+			<a href="#">Gallery</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+		</div>
+	
+		</nav>	
+		
+		<div>
+		<a href="#" class="bar-icon"  oneclick=" slideshow()"> 
+
+			<i class="fa fa-bars" aria-hidden="true"></i> </a>
+		<div class="search-box">
+			<input class="search-text" type="text" name=""placeholder="Search For Your City">
+			<a class="search-btn" href="#"></a>
+			<i class="fa fa-search" aria-hidden="true"></i>
+			
+		</div>
+	</div>
+
+		<main>
+			<section>
+				<h3>WELCOME TO <span class="colorchange"> "OUR WEBSITE"</span> </h3>
+				<h1> YOU CAN LOOK FOR <span class="colorchange">PERFECT PARTNER</span> </h1>
+				<p>"We connect two heart" </p>
+
+
+				<a href="#" class="btnone">FIND HERE </a>
+				<a href="#" class="btntwo"> KNOW MORE </a>
+			</section>
+		</main>
+	 </header>
+
+ <br>
+
+
+	
+
+
+<section class="text-center mb-3 mt-2">
+	
+  <div class="spinner-border text-muted"></div>
+  <div class="spinner-border text-primary"></div>
+  <div class="spinner-border text-success"></div>
+  <div class="spinner-border text-info"></div>
+  <div class="spinner-border text-warning"></div>
+  <div class="spinner-border text-danger"></div>
+  <div class="spinner-border text-secondary"></div>
+  <div class="spinner-border text-dark"></div>
+  <div class="spinner-border text-light"></div>
+</div>
+
+
+</section>
+
+
+
+
+
+</section>
+
+<section class="text-center mb-3">
+	<div class="spinner-grow text-muted"></div>
+<div class="spinner-grow text-primary"></div>
+<div class="spinner-grow text-success"></div>
+<div class="spinner-grow text-info"></div>
+<div class="spinner-grow text-warning"></div>
+<div class="spinner-grow text-danger"></div>
+<div class="spinner-grow text-secondary"></div>
+<div class="spinner-grow text-dark"></div>
+<div class="spinner-grow text-light"></div>
+</section>
+
+
+
+<footer>
+	<p class="bg-dark text-center text-white mt-4">copyright@GuRuamaze</p>
+</footer>
+
+
+
+
+
+
+ 
+
+
+
+</body>
+</html>
